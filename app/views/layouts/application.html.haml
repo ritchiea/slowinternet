@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    :javascript
+      if (window.siData === undefined) window.siData = {}
+      siData.url = #{@url}
+    %title Slowinternet
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    = yield

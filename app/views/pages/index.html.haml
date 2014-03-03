@@ -1,0 +1,9 @@
+.container-fluid
+  .main-container
+    .row
+      .col-md-12
+        = form_tag load_page_path do
+          .form-group
+            = label_tag "Explore the internet", class: 'form-control'
+            = text_field_tag "URL", nil, class: 'form-input'
+            = submit_tag 'Go', class: 'btn btn-primary'
